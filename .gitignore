@@ -1,3 +1,5 @@
+# Distribution / packaging
+.Python
+env/
 venv/
-.venv/
-/venv/
+ENV/
