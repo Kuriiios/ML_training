@@ -1,4 +1,4 @@
-certifi @ file:///croot/certifi_1671487769961/work/certifi
+certifi==2025.4.26
 click==8.1.8
 Flask==2.2.5
 gunicorn==23.0.0
