@@ -9,15 +9,14 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    email_text = request.form.get('content')
-    email_text = [email_text]
+    email_text = request.form['email_content']
     prediction = make_prediction(email_text)
     return render_template('index.html', prediction=prediction, email_text=email_text)
 
 @app.route('/api/predict', methods=['POST'])
 def api_predict():
     data = request.get_json(force = True)
-    email_text = data['content']
+    email_text = data['email_content']
     prediction = make_prediction(email_text)
     return jsonify({'prediction': prediction, 'email_text': email_text})  
 
