@@ -17,7 +17,7 @@ def predict():
 def api_predict():
     data = request.get_json(force = True)
     email_text = data['email_content']
-    prediction = make_prediction(email_text)
+    prediction = make_prediction(email_text[0])
     return jsonify({'prediction': prediction, 'email_text': email_text})  
 
 if __name__ == '__main__':
