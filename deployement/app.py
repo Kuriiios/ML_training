@@ -3,7 +3,7 @@ from .utils import make_prediction
 
 app = Flask(__name__)
 
-@app.route('/', methods={'GET', 'POST'})
+@app.route('/', methods=['GET'])
 def home():
     return render_template('index.html')
 
